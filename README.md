@@ -1,0 +1,60 @@
+#  Asynchronous Playwright Scraper - Dentists in Bilbao, Spain.
+
+This is a robust and asynchronous scrapper made in Python with the library **Playwright**, wich automatically extracts dental clinics and dentists in Bilbao from the Yellow Pages of Spain
+
+##  Characteristics
+
+* **Asynchronous:** Utilizes (`asyncio`) and the *Playwright Async API* for efficient, non-blocking network requests.
+
+* **Data Sanitization and Filtering:** 
+Sanitizes and validates based on whitelist of location and activity using normalization unicode (`unicodedata`) and deletes duplicated registers.
+
+* **Duplicate Removals:** 
+in these websites there is a few duplicates, the script cleans it.
+
+* **Human Behaivor Simulation:** 
+It has built-in delays between navigation actions and *headless = false*, to mitigate ban risks.
+
+* **Error Handling:** 
+Equipped with error handling: if an extraction fails, the main flow continues uninterrupted.
+
+* **Logging:** 
+Use of (`logging`) for a clean and real-time console reading. 
+
+##  Technologies used
+
+* **Python 3.10+**
+* **Playwright (Async API)**
+* **Pandas**
+* **Asyncio**
+
+## How to use
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/Marley9284/playwright-dentists-bilbao-scraper.git](https://github.com/Marley9284/playwright-dentists-bilbao-scraper.git)
+   cd playwright-dentists-bilbao-scraper
+
+2. **Install dependencies** 
+   ```bash
+   pip install -r requirements.txt
+
+3. **Install Playwright browsers**
+   ```bash
+   playwright install chromium
+
+4. **Run the scraper**
+   ```bash
+   python src/main.py
+
+## Output
+
+Upon successful completion, the script generates a file named **Dentists.csv** structured with ";" as delimitator and UTF-8 codification (for compatibility with Microsoft Excel) wich includes the folowing fields:
+
+| Field | Description |
+| --- | --- | 
+| **title** | Name of the dental clinic or practitioner.| 
+| **activity** | The specialization listed. | 
+| **number** | The contact phone number (formatted as text to prevent data corruption).|
+| **address** | The physical street address.|
+| **location** | The specific city/municipality *(filtered for Bilbao).* |   
