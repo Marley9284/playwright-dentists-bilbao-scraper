@@ -1,6 +1,6 @@
 #  Asynchronous Playwright Scraper - Dentists in Bilbao, Spain.
 
-This is a robust and asynchronous scrapper made in Python with the library **Playwright**, wich automatically extracts dental clinics and dentists in Bilbao from the Yellow Pages of Spain
+This is a robust and asynchronous scraper made in Python with the library **Playwright**, wich automatically extracts dental clinics and dentists in Bilbao from the Yellow Pages of Spain
 
 ##  Characteristics
 
@@ -49,7 +49,7 @@ Use of (`logging`) for a clean and real-time console reading.
 
 ## Output
 
-Upon successful completion, the script generates a file named **Dentists.csv** structured with ";" as delimitator and UTF-8 codification (for compatibility with Microsoft Excel) wich includes the folowing fields:
+Upon successful completion, the script generates a file named **Dentists.csv** structured with ";" as delimiter and UTF-8 encoding (for compatibility with Microsoft Excel) which includes the following fields:
 
 | Field | Description |
 | --- | --- | 
@@ -58,3 +58,8 @@ Upon successful completion, the script generates a file named **Dentists.csv** s
 | **number** | The contact phone number (formatted as text to prevent data corruption).|
 | **address** | The physical street address.|
 | **location** | The specific city/municipality *(filtered for Bilbao).* |   
+
+<img width="1127" height="288" alt="Demo" src="https://github.com/user-attachments/assets/49c91bc6-dbcc-400d-8da1-afb5c6f66bcb" />
+(Numbers and locations fields are not shown in the image)
+
+
