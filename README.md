@@ -1,19 +1,16 @@
-#  Asynchronous Playwright Scraper - Dentists in Bilbao, Spain.
+#  Asynchronous Playwright Scraper - Dentists in Bilbao, Spain
 
-This is a robust and asynchronous scraper made in Python with the library **Playwright**, wich automatically extracts dental clinics and dentists in Bilbao from the Yellow Pages of Spain
+This is a robust and asynchronous scraper made in Python with the library **Playwright**, which automatically extracts dental clinics and dentists in Bilbao from the Yellow Pages of Spain.
 
 ##  Characteristics
 
 * **Asynchronous:** Utilizes (`asyncio`) and the *Playwright Async API* for efficient, non-blocking network requests.
 
 * **Data Sanitization and Filtering:** 
-Sanitizes and validates based on whitelist of location and activity using normalization unicode (`unicodedata`) and deletes duplicated registers.
+Sanitizes and validates based on whitelist of location and activity using Unicode normalization (`unicodedata`) and deletes duplicated entries.
 
-* **Duplicate Removals:** 
-in these websites there is a few duplicates, the script cleans it.
-
-* **Human Behaivor Simulation:** 
-It has built-in delays between navigation actions and *headless = false*, to mitigate ban risks.
+* **Human Behavior Simulation:** 
+It has built-in delays between navigation actions and *headless=False*, to mitigate ban risks.
 
 * **Error Handling:** 
 Equipped with error handling: if an extraction fails, the main flow continues uninterrupted.
@@ -32,7 +29,7 @@ Use of (`logging`) for a clean and real-time console reading.
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/Marley9284/playwright-dentists-bilbao-scraper.git](https://github.com/Marley9284/playwright-dentists-bilbao-scraper.git)
+   git clone https://github.com/Marley9284/playwright-dentists-bilbao-scraper.git
    cd playwright-dentists-bilbao-scraper
 
 2. **Install dependencies** 
